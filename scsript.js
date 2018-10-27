@@ -45,8 +45,14 @@ for (let index = 0; index < buttons_sign.length; index++) {
             incrementPadidng();
         }
 
+        //Niektórych rzeczy nie można naprawić, więc wystraczy wywalić error alertem =))
         if (signs.length == 9) {
             alert("Równanie jest za długie, rozważ kliknięcie '=' albo cssy się rozwalą na amen");
+        }
+
+        if (buttons_special_array.includes(signs[signs.length - 1]) && buttons_special_array.includes(signs[signs.length -2])) {
+            alert("Nie stawiaj znaków obok siebie, to kompletnie nie ma sensu!");
+            clear();
         }
     })
 };
